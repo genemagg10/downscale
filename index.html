@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#1a120e" />
+    <meta
+      name="description"
+      content="Downscale — a browser prototype. The watch on the desk is a world."
+    />
+    <title>Downscale</title>
+    <link rel="icon" href="%BASE_URL%favicon.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="veil"></div>
+    <div id="vignette"></div>
+    <div id="hud">
+      <ol id="depth">
+        <li data-w="bedroom">Room</li>
+        <li data-w="watch">Watch</li>
+        <li data-w="micro">Dust</li>
+      </ol>
+      <div id="keybadge" hidden>
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="11" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2.4" />
+          <path d="M16 14.5 L26 22 L23 25 L20 22.5 L18.2 24.5 L16.2 22.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+        </svg>
+        <span>1</span>
+      </div>
+      <p id="backend"></p>
+      <div id="crosshair"></div>
+      <p id="toast"></p>
+      <p id="prompt"></p>
+      <p id="hint">WASD / arrows move · mouse look · E zoom in · Q zoom out · Shift run</p>
+    </div>
+    <div id="touch">
+      <div class="pad" aria-label="Move">
+        <button type="button" data-k="KeyW">W</button>
+        <button type="button" data-k="KeyA">A</button>
+        <button type="button" data-k="KeyS">S</button>
+        <button type="button" data-k="KeyD">D</button>
+      </div>
+      <div class="zoom-keys">
+        <button type="button" data-k="KeyE">Zoom in</button>
+        <button type="button" data-k="KeyQ">Zoom out</button>
+      </div>
+    </div>
+    <div id="boot">
+      <div class="card">
+        <p class="eyebrow">a prototype</p>
+        <h1>Downscale</h1>
+        <p id="lead">An ordinary room. A watch on the desk. Look closer.</p>
+        <button id="play" type="button" disabled>Winding the spring…</button>
+        <p class="controls">WASD / arrows move · mouse look · E zoom in · Q zoom out · Shift run</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
