@@ -29,7 +29,7 @@ The same hints sit on screen while you play. On a phone, drag to look and use th
 ## Stack
 
 - TypeScript and Vite
-- Three.js `WebGPURenderer` — WebGPU where the browser has it, WebGL 2 as the fallback
+- Three.js — WebGPU when the browser has an adapter, classic WebGL 2 otherwise
 - Rapier for the player capsule and the solid parts of each world
 
 Each scale is its own scene and its own physics world. A zoom dollies the camera into a surface, washes the frame in that surface's color, and reveals the next scene from a matching close-up. The coordinate system resets, so the key stays traveler-sized instead of shrinking with the world.
