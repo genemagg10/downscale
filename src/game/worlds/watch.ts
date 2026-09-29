@@ -1,4 +1,4 @@
-import * as THREE from 'three/webgpu';
+import * as THREE from 'three';
 import RAPIER from '@dimforge/rapier3d-compat';
 import { ZOOM_FOV } from '../constants';
 import { createGearGeometry } from '../geom';
@@ -80,7 +80,7 @@ export function createWatch(): ScaleWorld {
   sun.position.set(4, 12, 6);
   sun.target.position.set(0, 0, 0);
   sun.castShadow = true;
-  sun.shadow.mapSize.set(2048, 2048);
+  sun.shadow.mapSize.set(1024, 1024);
   sun.shadow.camera.near = 2;
   sun.shadow.camera.far = 36;
   sun.shadow.camera.left = -22;

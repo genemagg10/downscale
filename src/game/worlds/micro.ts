@@ -1,4 +1,4 @@
-import * as THREE from 'three/webgpu';
+import * as THREE from 'three';
 import RAPIER from '@dimforge/rapier3d-compat';
 import { ZOOM_FOV } from '../constants';
 import { createKeyMesh } from '../geom';

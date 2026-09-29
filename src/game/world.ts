@@ -1,4 +1,4 @@
-import type * as THREE from 'three/webgpu';
+import type * as THREE from 'three';
 import type RAPIER from '@dimforge/rapier3d-compat';
 
 export type WorldId = 'bedroom' | 'watch' | 'micro';

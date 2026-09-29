@@ -1,4 +1,4 @@
-import * as THREE from 'three/webgpu';
+import * as THREE from 'three';
 import RAPIER from '@dimforge/rapier3d-compat';
 import { BODY_CENTER, CAPSULE_HALF, CAPSULE_RADIUS } from './constants';
 
@@ -21,7 +21,7 @@ export function mat(opts: MatOpts): THREE.MeshStandardMaterial {
     metalness: opts.metalness ?? 0.02,
     emissive: opts.emissive ?? '#000000',
     emissiveIntensity: opts.emissiveIntensity ?? 0,
-    map: opts.map,
+    ...(opts.map ? { map: opts.map } : {}),
     transparent: opts.transparent ?? false,
     opacity: opts.opacity ?? 1,
     side: opts.side ?? THREE.FrontSide,

@@ -1,4 +1,4 @@
-import * as THREE from 'three/webgpu';
+import * as THREE from 'three';
 
 function canvas(size = 512): [HTMLCanvasElement, CanvasRenderingContext2D] {
   const c = document.createElement('canvas');

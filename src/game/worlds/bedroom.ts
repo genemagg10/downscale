@@ -1,4 +1,4 @@
-import * as THREE from 'three/webgpu';
+import * as THREE from 'three';
 import RAPIER from '@dimforge/rapier3d-compat';
 import { PLAY_FOV } from '../constants';
 import { addBlob, addBox, addCylinder, addPlayer } from '../stage';
@@ -73,7 +73,7 @@ export function createBedroom(): ScaleWorld {
   moon.position.set(-1.5, 6.5, -5.5);
   moon.target.position.set(0.4, 0.5, 0.5);
   moon.castShadow = true;
-  moon.shadow.mapSize.set(2048, 2048);
+  moon.shadow.mapSize.set(1024, 1024);
   moon.shadow.camera.near = 1;
   moon.shadow.camera.far = 22;
   moon.shadow.camera.left = -8;

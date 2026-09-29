@@ -1,4 +1,4 @@
-import * as THREE from 'three/webgpu';
+import * as THREE from 'three';
 import { KEY_HEIGHT } from './constants';
 
 /** Flat gear in the XZ plane, bottom at y = 0, spinning around Y. */

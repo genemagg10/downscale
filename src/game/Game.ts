@@ -1,4 +1,4 @@
-import * as THREE from 'three/webgpu';
+import * as THREE from 'three';
 import {
   BODY_CENTER,
   EYE_HEIGHT,
@@ -26,6 +26,18 @@ export interface DownscaleState {
   yaw: number;
   pitch: number;
   aim: string;
+}
+
+export interface ViewRenderer {
+  domElement: HTMLCanvasElement;
+  outputColorSpace: string;
+  toneMapping: THREE.ToneMapping;
+  toneMappingExposure: number;
+  shadowMap: { enabled: boolean; type: THREE.ShadowMapType };
+  setPixelRatio(value?: number): void;
+  setSize(width: number, height: number, updateStyle?: boolean): void;
+  setAnimationLoop(callback: ((time: number) => void) | null): void | Promise<void>;
+  render(scene: THREE.Scene, camera: THREE.Camera): void;
 }
 
 interface Anchor {
@@ -75,7 +87,7 @@ export class Game {
   private readonly depthItems: HTMLElement[];
 
   constructor(
-    private readonly renderer: THREE.WebGPURenderer,
+    private readonly renderer: ViewRenderer,
     worlds: ScaleWorld[],
     backendName: string,
     tour: boolean,
